@@ -14,40 +14,29 @@
 
     <div class="content-bg">
       <div class="main">
-        <div class="container_12">
-          <div class="wrapper img-indent-bot">
-            <article class="col-md-12">
+        <div class="row">
+            <article class="col-md-12 col-xs-6 col-sm-10">
               <h3>Main Services Overview</h3>
               <% if @services.any? %>
-                  <% @services.each_with_index do |service, idx| %>
-                      <% if (idx%3).zero? %>
-                          <div class="row wrapper">
-                      <% end %>
-                      <article class="col-md-4 col-xs-12">
-                        <div class="wrapper">
-                          <figure class="img-indent3"><img src="images/page3-img1.png" alt="" /></figure>
-                          <div class="extra-wrap">
-                            <h4 class="p1"><h3><%= service.name %></h3></h4>
-                            <p class="prev-indent-bot"><%= service.header.to_s.blank? ? service.body.html_safe : service.header.html_safe %></p>
-                            <a class="link-1" href="#"><%= link_to( 'Know more', "/services/#{service.identifier}") if service.header.to_s.present? %></a>
-                          </div>
-                        </div>
-                      </article>
-                      <% if (idx%3) == 3 %>
-                          </div>
-                      <% end %>
-                  <% end %>
-                  <% if (@services.count%3) != 3 %>
-                      </div>
-                  <% end %>
-              <% end %>
-              </article>
-              </div>
-      </div>
-    </div>
+                  <div class="row">
+                    <% @services.each_with_index do |service, idx| %>
 
-</div>
-</section>
+                        <div class="col-md-4 col-xs-12 col-sm-6">
+                          <h4 class="p1"><h3><%= service.name %></h3></h4>
+                          <p class="prev-indent-bot"><%= service.header.to_s.blank? ? service.body.html_safe : service.header.html_safe %></p>
+                          <a class="link-1" href="#"><%= link_to( 'Know more', "/services/#{service.identifier}") if service.header.to_s.present? %></a>
+
+                        </div>
+
+                    <% end %>
+                  </div>
+              <% end %>
+            </article>
+          </div>
+      </div>
+
+    </div>
+  </section>
 </div>
 
 <script type="text/javascript"> Cufon.now(); </script>
