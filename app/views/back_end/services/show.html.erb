@@ -1,0 +1,22 @@
+
+<p id="notice"><%= notice %></p>
+<div class="col-md-12">
+<h1></h1>
+
+<p>
+  <strong>Name:</strong>
+  <%= @back_end_service.name %>
+</p>
+<p>
+  <strong>Active:</strong>
+  <%= @back_end_service.active %>
+</p>
+<hr/>
+<p>
+  <%= @back_end_service.body.html_safe %>
+</p>
+
+
+<%= link_to 'Edit', edit_back_end_service_path(@back_end_service), class: 'btn btn-success' %>
+<%= link_to 'Back', back_end_services_path, class: 'btn btn-default' %>
+</div>

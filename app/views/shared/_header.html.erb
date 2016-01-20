@@ -1,0 +1,30 @@
+<div class="row-top">
+  <div class="main">
+    <div class="wrapper">
+      <h1><%= link_to image_tag("logo.png"), root_path %></h1>
+      <form id="search-form" method="post" enctype="multipart/form-data">
+        <fieldset>
+          <div class="search-field">
+            <input name="search" type="text" value="Search..." onBlur="if(this.value=='') this.value='Search...'" onFocus="if(this.value =='Search...' ) this.value=''" />
+            <a class="search-button" href="#" onClick="document.getElementById('search-form').submit()"></a>
+          </div>
+        </fieldset>
+      </form>
+    </div>
+  </div>
+</div>
+<div class="menu-row">
+  <div class="menu-bg">
+    <div class="main">
+      <nav class="indent-left">
+        <ul class="menu wrapper">
+          <li class="active"><%= link_to 'Home page', root_path %></li>
+          <li><%= link_to "About us", 'about-us' %></li>
+          <li><%= link_to "Our services", 'our-services' %></li>
+          <li><%= link_to "Events", 'events' %></li>
+          <li><%= link_to "Contact us", 'contact-us' %></li>
+        </ul>
+      </nav>
+    </div>
+  </div>
+</div>

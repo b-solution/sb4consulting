@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Sbconsulting</title>
+  <%= stylesheet_link_tag    'back_end/application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'back_end/application' %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+<%= render partial: 'back_end/shared/nav_header' %>
+<div class="row">
+  <div class="col-md-2"></div>
+  <div class="col-md-8" style="background-color: white;">
+    <div class="container-fluid" style="margin-top: 51px">
+      <%= yield %>
+    </div>
+  </div>
+  <div class="col-md-2"></div>
+</div>
+
+
+
+
+</body>
+</html>

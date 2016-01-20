@@ -1,0 +1,24 @@
+
+<div class="extra" id="page3">
+  <!--==============================header=================================-->
+
+  <header>
+    <%= render :partial => 'shared/header' %>
+    <div class="row-bot">
+      <div class="center-shadow">
+      </div>
+    </div>
+  </header>
+  <!--==============================content================================-->
+  <section id="content">
+    <div class="row">
+      <div class="col-md-2">
+      </div>
+      <div class="col-md-8" style="background-color: white; padding: 2% 1%;">
+        <%= @page.body.html_safe %>
+      </div>
+      <div class="col-md-2">
+      </div>
+    </div>
+  </section>
+</div>

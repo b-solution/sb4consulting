@@ -1,0 +1,1 @@
+($.browser.mozilla||$.browser.opera)&&function(){function n(){window.addEventListener("unload",e,!1)}function e(){window.removeEventListener("beforeunload",e,!1)}window.addEventListener("pageshow",n,!1),window.addEventListener("unload",e,!1)}();
