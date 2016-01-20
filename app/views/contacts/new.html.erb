@@ -26,6 +26,18 @@
                       </div>
                     </div>
                     <div class="form-group">
+                      <label for="inputEmail3" class="col-sm-2 control-label"> <%= f.label :name %></label>
+                      <div class="col-sm-10">
+                        <%= f.text_field :name , class:"form-control", id:"inputEmail" %>
+                      </div>
+                    </div>
+                    <div class="form-group">
+                      <label for="inputEmail3" class="col-sm-2 control-label"> <%= f.label :organisation %></label>
+                      <div class="col-sm-10">
+                        <%= f.text_field :organisation , class:"form-control", id:"inputEmail" %>
+                      </div>
+                    </div>
+                    <div class="form-group">
                       <label for="inputEmail3" class="col-sm-2 control-label">  <%= f.label :subject %> </label>
                       <div class="col-sm-10">
                         <%= f.text_field :subject, class:"form-control", id:"inputSubject" %>
@@ -38,8 +50,7 @@
                       </div>
                     </div>
                     <div class="buttons2">
-                      <a href="#" class="btn btn-warning" onClick="document.getElementById('contact-form2').reset()">Clear</a>
-                      <a href="#" class="btn btn-primary" onClick="document.getElementById('contact-form2').submit()">Send</a>
+                      <% submit_tag :send %>
                     </div>
                 <% end %>
               </article>
