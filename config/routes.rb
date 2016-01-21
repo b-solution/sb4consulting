@@ -21,11 +21,11 @@ Rails.application.routes.draw do
   get 'services/:identifier',  controller: 'services', action: "show"
 
   devise_for :admins
-  resources :contacts
+  resources :contacts, except: [:index, :edit, :update, :destroy]
   get 'contact-us', to: 'contacts#new'
   get 'our-services', to: 'welcome#services'
   get 'about-us', to: 'welcome#aboutus'
-  get 'events', to: 'welcome#events'
+  get 'news', to: 'welcome#news'
   get 'welcome/index'
   root to: 'welcome#index'
 
