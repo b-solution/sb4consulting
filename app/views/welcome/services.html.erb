@@ -1,5 +1,5 @@
 
-<div class="extra" id="page3">
+<div id="page3">
   <!--==============================header=================================-->
 
   <header>
@@ -10,29 +10,28 @@
     </div>
   </header>
   <!--==============================content================================-->
-  <section id="content">
+  <section >
+    <div class="content">
+      <div class="row">
+        <div class="col-md-2">
 
-    <div class="content-bg">
-      <div class="main">
-        <div class="row">
-            <article class="col-md-12 col-xs-6 col-sm-10">
-              <h3>Main Services Overview</h3>
-              <% if @services.any? %>
-                  <div class="row">
-                    <% @services.each_with_index do |service, idx| %>
+        </div>
+        <article class="col-md-8 col-xs-6 col-sm-10">
+          <% if @services.any? %>
+              <div class="row">
+                <% @services.each do |service, idx| %>
+                    <div class="col-md-4 col-xs-10 col-sm-6">
+                      <h4 class="p1"><h3><%= service.name %></h3></h4>
+                      <p class="prev-indent-bot"><%= service.header.to_s.blank? ? service.body.html_safe : service.header.html_safe %></p>
+                      <a class="link-1" href="#"><%= link_to( 'Know more', "/services/#{service.identifier}") if service.header.to_s.present? %></a>
+                    </div>
+                <% end %>
+              </div>
+          <% end %>
+        </article>
+        <div class="col-md-2">
 
-                        <div class="col-md-4 col-xs-12 col-sm-6">
-                          <h4 class="p1"><h3><%= service.name %></h3></h4>
-                          <p class="prev-indent-bot"><%= service.header.to_s.blank? ? service.body.html_safe : service.header.html_safe %></p>
-                          <a class="link-1" href="#"><%= link_to( 'Know more', "/services/#{service.identifier}") if service.header.to_s.present? %></a>
-
-                        </div>
-
-                    <% end %>
-                  </div>
-              <% end %>
-            </article>
-          </div>
+        </div>
       </div>
 
     </div>

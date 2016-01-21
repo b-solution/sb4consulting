@@ -6,7 +6,7 @@ class WelcomeController < ApplicationController
     @services = BackEnd::Service.active
   end
 
-  def events
+  def news
     # @events = BackEnd::Event.active
     render :under_construction
   end

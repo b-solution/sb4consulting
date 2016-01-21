@@ -10,55 +10,67 @@
 
   <!--==============================content================================-->
   <section id="content">
-    <div class="content-bg">
-      <div class="main">
-        <div class="row">
-          <div class="col-md-12">
-            <div class="wrapper">
-              <article class="col-md-8">
-                <h3>Contact Form</h3>
-                <%= form_for(@contact, {id: 'contact-form2'}) do |f| %>
+    <div class="row">
+      <div class="col-md-12">
+        <div class=" col-md-2 col-sm-1">
+        </div>
+        <div class="col-md-8 col-sm-10  col-xs-12">
 
-                    <div class="form-group">
-                      <label for="inputEmail3" class="col-sm-2 control-label"> <%= f.label :email %></label>
-                      <div class="col-sm-10">
-                        <%= f.text_field :email , class:"form-control", id:"inputEmail" %>
-                      </div>
+          <div class="row">
+            <div class="col-md-4 col-sm-4 col-xs-18">
+              <h1>&nbsp;</h1>
+              <div class="col-md-12">
+                <strong>Adresse :</strong> Lotissement Lou Miradou, Saint Drezery. 34160. FRANCE
+              </div>
+              <div  class="col-md-12">
+                <strong>Tel : </strong>+ (33) 6 63 47 25 97
+              </div>
+            </div>
+            <div class="col-md-8 col-sm-8 col-xs-6">
+              <h3>Contact Form</h3>
+              <%= form_for(@contact, {id: 'contact-form2'}) do |f| %>
+
+                  <div class="form-group">
+                    <label for="inputEmail3" class="col-sm-2 control-label"> <%= f.label :email %></label>
+                    <div class="col-sm-10">
+                      <%= f.text_field :email , class:"form-control", id:"inputEmail" %>
                     </div>
-                    <div class="form-group">
-                      <label for="inputEmail3" class="col-sm-2 control-label"> <%= f.label :name %></label>
-                      <div class="col-sm-10">
-                        <%= f.text_field :name , class:"form-control", id:"inputEmail" %>
-                      </div>
+                  </div>
+                  <div class="form-group">
+                    <label for="inputEmail3" class="col-sm-2 control-label"> <%= f.label :name %></label>
+                    <div class="col-sm-10">
+                      <%= f.text_field :name , class:"form-control", id:"inputEmail" %>
                     </div>
-                    <div class="form-group">
-                      <label for="inputEmail3" class="col-sm-2 control-label"> <%= f.label :organisation %></label>
-                      <div class="col-sm-10">
-                        <%= f.text_field :organisation , class:"form-control", id:"inputEmail" %>
-                      </div>
+                  </div>
+                  <div class="form-group">
+                    <label for="inputEmail3" class="col-sm-2 control-label"> <%= f.label :organisation %></label>
+                    <div class="col-sm-10">
+                      <%= f.text_field :organisation , class:"form-control", id:"inputEmail" %>
                     </div>
-                    <div class="form-group">
-                      <label for="inputEmail3" class="col-sm-2 control-label">  <%= f.label :subject %> </label>
-                      <div class="col-sm-10">
-                        <%= f.text_field :subject, class:"form-control", id:"inputSubject" %>
-                      </div>
+                  </div>
+                  <div class="form-group">
+                    <label for="inputEmail3" class="col-sm-2 control-label">  <%= f.label :subject %> </label>
+                    <div class="col-sm-10">
+                      <%= f.text_field :subject, class:"form-control", id:"inputSubject" %>
                     </div>
-                    <div class="form-group" >
-                      <label for="inputEmail3" class="col-sm-2 control-label">Message</label>
-                      <div class="col-sm-10">
-                        <%= f.text_area :text, class:"form-control", id:"inputText"%>
-                      </div>
+                  </div>
+                  <div class="form-group" >
+                    <label for="inputEmail3" class="col-sm-2 control-label">Message</label>
+                    <div class="col-sm-10">
+                      <%= f.text_area :text, class:"form-control", id:"inputText"%>
                     </div>
-                    <div class="buttons2">
-                      <%= submit_tag :send, class: "btn btn-primary" %>
-                    </div>
-                <% end %>
-              </article>
+                  </div>
+                  <div class="buttons2">
+                    <%= submit_tag :send, class: "btn btn-primary" %>
+                  </div>
+              <% end %>
             </div>
           </div>
+
+        </div>
+        <div class=" col-md-2 col-sm-1">
         </div>
       </div>
-      <div class="block"></div>
     </div>
   </section>
 </div>
