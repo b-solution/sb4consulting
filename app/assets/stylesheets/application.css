@@ -11,6 +11,6 @@
  * file per style scope.
  *
  *= require reset
- *= require style.css.erb
  *= require bootstrap_and_overrides
+ *= require style.css.erb
  */

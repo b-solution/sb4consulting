@@ -2,7 +2,7 @@
   <div class="main">
     <div class="row">
       <div class="col-md-11 col-sm-11 col-xs-11 pull-right">
-        <h1><%= link_to image_tag("logo.png"), root_path %></h1>
+        <h1><%= link_to image_tag("sbconsulting/logo.png"), root_path %></h1>
         <form id="search-form" method="post" enctype="multipart/form-data">
           <fieldset>
             <!--<div class="search-field">-->
@@ -16,17 +16,18 @@
   </div>
 </div>
 <div class="menu-row">
-  <div class="menu-bg">
-    <div class="main">
-      <nav class="indent-left">
-        <ul class="menu wrapper">
-          <li class="<%= params[:action] == "index" ? "active" : '' %> "><%= link_to 'Home page', root_path %></li>
-          <li class="<%= params[:action] == "aboutus" ? "active" : '' %> "><%= link_to "About us", 'about-us' %></li>
-          <li class="<%= params[:action] == "services" ? "active" : '' %> "><%= link_to "Our services", 'our-services' %></li>
-          <li class="<%= params[:action] == "news" ? "active" : '' %> "><%= link_to "News", 'news' %></li>
-          <li class="<%= params[:action] == "new"  ? "active" : '' %> "><%= link_to "Contact us", 'contact-us' %></li>
-        </ul>
-      </nav>
+  <div class="menu-bg-black"></div>
+  <nav class="navbar navbar-inverse">
+    <div class="container-fluid">
+      <ul class="nav navbar-nav">
+        <li class=" <%= params[:action] == "index" ? "active   " : '' %> "><%= link_to 'Home page', root_path %></li>
+        <li class=" <%= params[:action] == "aboutus" ? "active " : '' %> "><%= link_to "About us", 'about-us' %></li>
+        <li class=" <%= params[:action] == "services" ? "active " : '' %> "><%= link_to "Our services", 'our-services' %></li>
+        <li class=" <%= params[:action] == "news" ? "active " : '' %> "><%= link_to "News", 'news' %></li>
+        <li class=" <%= params[:action] == "new"  ? "active " : '' %> "><%= link_to "Contact us", 'contact-us' %></li>
+
+      </ul>
     </div>
-  </div>
+  </nav>
+
 </div>

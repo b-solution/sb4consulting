@@ -2,15 +2,14 @@ Rails.application.routes.draw do
 
   namespace :back_end do
     resources :events
-  end
-  namespace :back_end do
     resources :services
-  end
-  namespace :back_end do
     get 'admins/index'
     get '/', to: "admins#index"
-    resources :events
-    resources :services
+    resources :contacts, except: [:new, :create, :edit, :destroy, :update] do
+      member do
+        get 'archive'
+      end
+    end
     resources :pages, except: [:index, :show, :new, :create, :destroy] do
       collection do
         get 'aboutus'

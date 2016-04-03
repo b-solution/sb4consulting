@@ -3,25 +3,30 @@
   <header>
     <%= render :partial => 'shared/header' %>
     <div class="row-bot">
-      <div class="center-shadow">
-        <div class="carousel-container">
-          <div id="carousel">
-            <div class="carousel-feature">
-              <a href="<%= 'news' %>"><%= image_tag "gallery-img1.png", class: "carousel-image img-responsive", alt: "" %></a>
-            </div>
-            <div class="carousel-feature">
-              <a href="<%= 'about-us' %>"><%= image_tag "gallery-img3.png", class: "carousel-image img-responsive", alt: "" %></a>
-            </div>
-            <div class="carousel-feature">
-              <a href="<%= 'our-services' %>"><%= image_tag "gallery-img2.png", class: "carousel-image img-responsive", alt: "" %></a>
+      <div class="row">
+        <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4">
+          <div class="row">
+            <div class="col-xs-4 col-sm-6 col-md-6 col-lg-6">
+              <a href="<%= 'news' %>"><%= image_tag "sbconsulting/cercle-journal.png", class: "carousel-image img-responsive", alt: "" %></a>
             </div>
           </div>
+          <div class="row">
+            <div class="col-xs-3 col-sm-4 col-md-4 col-lg-4"></div>
+            <div class="col-xs-4 col-sm-6 col-md-6 col-lg-6">
+              <a href="<%= 'about-us' %>"><%= image_tag "sbconsulting/cercle-stylo.png", class: "carousel-image img-responsive", alt: "", style: "margin-top: -40%;" %></a>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-xs-4 col-sm-6 col-md-6 col-lg-6">
+              <a href="<%= 'our-services' %>"><%= image_tag "sbconsulting/handshake.png", class: "carousel-image img-responsive", alt: "", style: "margin-top: -40%;" %></a>
+            </div>
+          </div>
+        </div>
+        <div class="col-xs-8 col-sm-6 col-md-8 col-lg-8" id="motcle">
+          <%= image_tag 'mot-cles.png', width: '100%', height: '80%' %>
         </div>
       </div>
     </div>
   </header>
 </div>
 
-<!--==============================footer=================================-->
-
-<script type="text/javascript"> Cufon.now(); </script>

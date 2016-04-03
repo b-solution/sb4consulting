@@ -1,0 +1,33 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Contacts</h1>
+
+<table class="table table-responsive">
+  <thead>
+    <tr>
+      <th>Email</th>
+      <th>Is read</th>
+      <th>Text</th>
+      <th>Subject</th>
+      <th>Is archive</th>
+      <th colspan="2"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @contacts.each do |contact| %>
+      <tr>
+        <td><%= contact.email %></td>
+        <td><%= contact.is_read %></td>
+        <td><%= contact.text %></td>
+        <td><%= contact.subject %></td>
+        <td><%= contact.is_archive %></td>
+        <td><%= link_to 'Show', back_end_contact_path(contact), class: 'btn btn-primary' %></td>
+        <td><%= link_to 'Archive', archive_back_end_contact_path(contact), class: 'btn btn-warning' %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
