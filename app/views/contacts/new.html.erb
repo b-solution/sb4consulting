@@ -24,22 +24,22 @@
                  Lotissement Lou Miradou <br/>Saint Drezery. 34160. FRANCE
               </div>
               <div  class="col-md-12">
-                <strong>Phone : </strong>+ (33) 6 63 47 25 97
+                <strong><%= t('contact.phone') %>: </strong>+ (33) 6 63 47 25 97
               </div>
             </div>
             <div class="col-md-8 col-sm-8 col-xs-6">
-              <h3>Contact Form</h3>
+              <h3><%= t('contact.contact_page ') %></h3>
               <%= form_for(@contact, {id: 'contact-form2'}) do |f| %>
 
 
                   <div class="form-group">
-                    <label for="inputEmail3" class="col-sm-2 control-label"> <%= f.label :name %></label>
+                    <label for="inputEmail3" class="col-sm-2 control-label"> <%= f.label t('contact.name') %></label>
                     <div class="col-sm-10">
                       <%= f.text_field :name , class:"form-control", id:"inputEmail" %>
                     </div>
                   </div>
                   <div class="form-group">
-                    <label for="inputEmail3" class="col-sm-2 control-label"> <%= f.label :organisation %></label>
+                    <label for="inputEmail3" class="col-sm-2 control-label"> <%= f.label t('contact.organisation') %></label>
                     <div class="col-sm-10">
                       <%= f.text_field :organisation , class:"form-control", id:"inputEmail" %>
                     </div>
@@ -51,19 +51,19 @@
                     </div>
                   </div>
                   <div class="form-group">
-                    <label for="inputEmail3" class="col-sm-2 control-label">  <%= f.label :subject %> </label>
+                    <label for="inputEmail3" class="col-sm-2 control-label">  <%= f.label t('contact.subject') %> </label>
                     <div class="col-sm-10">
                       <%= f.text_field :subject, class:"form-control", id:"inputSubject" %>
                     </div>
                   </div>
                   <div class="form-group" >
-                    <label for="inputEmail3" class="col-sm-2 control-label">Message</label>
+                    <label for="inputEmail3" class="col-sm-2 control-label"><%= t('contact.message') %></label>
                     <div class="col-sm-10">
                       <%= f.text_area :text, class:"form-control", id:"inputText"%>
                     </div>
                   </div>
                   <div class="buttons2">
-                    <%= submit_tag :send, class: "btn btn-primary" %>
+                    <%= submit_tag t('contact.send'), class: "btn btn-primary" %>
                   </div>
               <% end %>
             </div>
@@ -76,7 +76,3 @@
     </div>
   </section>
 </div>
-
-<!--==============================footer=================================-->
-
-<script type="text/javascript"> Cufon.now(); </script>

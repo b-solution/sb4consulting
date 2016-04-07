@@ -20,11 +20,11 @@
   <nav class="navbar navbar-inverse">
     <div class="container-fluid">
       <ul class="nav navbar-nav">
-        <li class=" <%= params[:action] == "index" ? "active   " : '' %> "><%= link_to 'Home page', root_path %></li>
-        <li class=" <%= params[:action] == "aboutus" ? "active " : '' %> "><%= link_to "About us", 'about-us' %></li>
-        <li class=" <%= params[:action] == "services" ? "active " : '' %> "><%= link_to "Our services", 'our-services' %></li>
-        <li class=" <%= params[:action] == "news" ? "active " : '' %> "><%= link_to "News", 'news' %></li>
-        <li class=" <%= params[:action] == "new"  ? "active " : '' %> "><%= link_to "Contact us", 'contact-us' %></li>
+        <li class=" <%= params[:action] == "index" ? "active   " : '' %> "><%= link_to t('home_page'), root_path %></li>
+        <li class=" <%= params[:action] == "aboutus" ? "active " : '' %> "><%= link_to t('about_us'), 'about-us' %></li>
+        <li class=" <%= params[:action] == "services" ? "active " : '' %> "><%= link_to t('our_services'), 'our-services' %></li>
+        <li class=" <%= params[:action] == "news" ? "active " : '' %> "><%= link_to t('news'), 'news' %></li>
+        <li class=" <%= params[:action] == "new"  ? "active " : '' %> "><%= link_to t('contact.contact_link'), 'contact-us' %></li>
 
       </ul>
     </div>

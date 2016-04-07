@@ -7,8 +7,8 @@ class WelcomeController < ApplicationController
   end
 
   def news
-    # @events = BackEnd::Event.active
-    render :under_construction
+    @events = BackEnd::Event.active
+    # render :under_construction
   end
 
   def aboutus

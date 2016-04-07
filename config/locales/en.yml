@@ -20,4 +20,16 @@
 # available at http://guides.rubyonrails.org/i18n.html.
 
 en:
-  hello: "Hello world"
+  home_page: "Home page"
+  about_us: "About us"
+  our_services: "Our services"
+  news: "News"
+  contact:
+    contact_link: "Contact us"
+    phone: "Phone"
+    contact_page : 'Contact page'
+    name: 'Name'
+    organisation: 'Organisation'
+    subject: 'Subject'
+    message: 'Message'
+    send: 'Send'

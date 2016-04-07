@@ -17,14 +17,14 @@
 
         </div>
         <article class="col-md-8 col-xs-6 col-sm-10">
-          <% if @services.any? %>
-              <div class="row">
-                <% @services.each do |service, idx| %>
-                    <div class="col-md-4 col-xs-10 col-sm-6">
-                      <h4 class="p1"><h3><%= service.name %></h3></h4>
-                      <p class="prev-indent-bot"><%= service.header.to_s.blank? ? service.body.html_safe : service.header.html_safe %></p>
-                      <a class="link-1" href="#"><%= link_to( 'Know more', "/services/#{service.identifier}") if service.header.to_s.present? %></a>
+          <% if @events.any? %>
+              <div class="row" >
+                <% @events.each do |event, idx| %>
+                    <div class="col-md-12 col-xs-12 col-sm-12">
+                      <h4 class="p1"><h3><%= event.name %></h3></h4>
+                      <p class="prev-indent-bot"><%=  event.body.html_safe %></p>
                     </div>
+                    <hr/>
                 <% end %>
               </div>
           <% end %>

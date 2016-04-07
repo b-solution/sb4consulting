@@ -1,0 +1,14 @@
+fr:
+  home_page: "Page acceuil"
+  about_us: "A propos"
+  our_services: "Nos services"
+  news: "Nouvauté"
+  contact:
+   contact_link: "Contacter nous"
+   phone: "Tél"
+   contact_page : 'Formulate de contact'
+   name: 'Nom'
+   organisation: 'Organisation'
+   subject: 'Sujet'
+   message: 'Message'
+   send: 'Envoyer'
