@@ -7,7 +7,8 @@ class ApplicationController < ActionController::Base
   def set_locale
     l = request.env['HTTP_ACCEPT_LANGUAGE'].scan(/^[a-z]{2}/).first
     locale = ['fr', 'en'].include?(l) ? l : :en
-    I18n.locale = locale
+    # I18n.locale = locale
+    I18n.locale = :en
   end
 
   private
