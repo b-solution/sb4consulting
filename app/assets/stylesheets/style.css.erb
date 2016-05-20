@@ -1,14 +1,5 @@
-/* Getting the new tags to behave */
-article, aside, audio, canvas, command, datalist, details, embed, figcaption, figure, footer, header, hgroup, keygen, meter, nav, output, progress, section, source, video {display:block}
-mark, rp, rt, ruby, summary, time {display:inline}
-
-/* Global properties ======================================================== */
-html {width:100%}
-
-body {font-family:Arial, Helvetica, sans-serif; font-size:100%; color:#333; min-width:960px; background:#f1f1f1}
-.ic {border:0;float:right;background:#fff;color:#f00;width:50%;line-height:10px;font-size:10px;margin:-220% 0 0 0;overflow:hidden;padding:0}
 .main {
-	width:960px; 	
+	width:100%;
 	padding:0;
 	margin:0 auto;
 	font-size:0.8125em;
@@ -81,7 +72,6 @@ header {
 }
 .row-top {
 	width:100%;
-	height:124px;
 	background:url(<%= asset_path "vectoriel.png" %>) center top repeat-x;
 	background-size: 100%;
 	background-repeat: no-repeat;
@@ -93,13 +83,15 @@ h1 {
 	position:relative;
 	float:left;
 }
-	h1 a img {
+	/*h1 a img {*/
 
-		height:80px;
-		margin-top: -35px;
-    margin-left: -25px;
-	}
-
+		/*height:80px;*/
+		/*margin-top: -35px;*/
+    /*margin-left: -25px;*/
+	/*}*/
+.vcenter {
+ margin-top: 10px;
+}
 /***** menu *****/
 .menu-row {
 	width:100%;
