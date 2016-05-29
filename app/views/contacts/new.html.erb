@@ -1,78 +1,49 @@
-<div id="page5">
-  <!--==============================header=================================-->
-  <header>
-    <%= render :partial => 'shared/header' %>
-    <div class="row-bot">
-      <div class="center-shadow">
-      </div>
-    </div>
-  </header>
-
-  <!--==============================content================================-->
-  <section id="content">
-    <div class="row">
-      <div class="col-md-12">
-        <div class=" col-md-2 col-sm-1">
-        </div>
-        <div class="col-md-8 col-sm-10  col-xs-12">
-
-          <div class="row">
-            <div class="col-md-4 col-sm-4 col-xs-18">
-              <h5>&nbsp;</h5>
-              <div class="col-md-12"><strong>SB4Consulting</strong></div>
-              <div class="col-md-12">
-                 Lotissement Lou Miradou <br/>Saint Drezery. 34160. FRANCE
-              </div>
-              <div  class="col-md-12">
-                <strong><%= t('contact.phone') %>: </strong>+ (33) 6 63 47 25 97
-              </div>
-            </div>
-            <div class="col-md-8 col-sm-8 col-xs-6">
-              <h3><%= t('contact.contact_page ') %></h3>
-              <%= form_for(@contact, :html => {:class => 'form-horizontal'}) do |f| %>
-
-
-                  <div class="form-group">
-                    <label for="inputEmail3" class="col-sm-2 control-label"> <%= f.label t('contact.name') %></label>
-                    <div class="col-sm-10">
-                      <%= f.text_field :name , class:"form-control", id:"inputEmail" %>
-                    </div>
-                  </div>
-                  <div class="form-group">
-                    <label for="inputEmail3" class="col-sm-2 control-label"> <%= f.label t('contact.organisation') %></label>
-                    <div class="col-sm-10">
-                      <%= f.text_field :organisation , class:"form-control", id:"inputEmail" %>
-                    </div>
-                  </div>
-                  <div class="form-group">
-                    <label for="inputEmail3" class="col-sm-2 control-label"> <%= f.label :email %></label>
-                    <div class="col-sm-10">
-                      <%= f.text_field :email , class:"form-control", id:"inputEmail" %>
-                    </div>
-                  </div>
-                  <div class="form-group">
-                    <label for="inputEmail3" class="col-sm-2 control-label">  <%= f.label t('contact.subject') %> </label>
-                    <div class="col-sm-10">
-                      <%= f.text_field :subject, class:"form-control", id:"inputSubject" %>
-                    </div>
-                  </div>
-                  <div class="form-group" >
-                    <label for="inputEmail3" class="col-sm-2 control-label"><%= t('contact.message') %></label>
-                    <div class="col-sm-10">
-                      <%= f.text_area :text, class:"form-control", id:"inputText"%>
-                    </div>
-                  </div>
-                  <div class="buttons2">
-                    <%= submit_tag t('contact.send'), class: "btn btn-primary" %>
-                  </div>
-              <% end %>
-            </div>
-          </div>
-
-        </div>
-        <div class=" col-md-2 col-sm-1">
-        </div>
-      </div>
-    </div>
-  </section>
+<%= render :partial => 'shared/header' %>
+<div class="sperator3">
 </div>
+<section class="form">
+  <div class="container">
+    <div class="form-content">
+      <div class="row">
+        <div class="col-sm-6 hidden-xs left-side">
+          <div class="left-sider">
+            <div class="contact-icons">
+              <a href="https://www.facebook.com/sb4consulting/" target="_blank"><%= image_tag "face2.png", alt: "facebook" %></a>
+              <a href="https://www.linkedin.com/in/sb4consulting-sadika-bernard-58aa488" target="_blank"><%= image_tag "linked2.png", alt: "linked" %></a>
+            </div>
+            <h2>contact us.....</h2>
+            <p>SB4Consulting</p>
+            <p>lotissement lou miradou</p>
+            <p>saint drezery.34160.FRANCE</p>
+            <p>phone:(+33)66372597</p>
+            <div class="sparit"></div>
+          </div>
+        </div>
+        <div class="col-sm-6 right-side">
+          <%= form_for(@contact) do |f| %>
+
+              <div class="form-group">
+                <%= f.text_field :name , class:"form-control", id:"exampleInputEmail1", placeholder: t('contact.name') %>
+              </div>
+              <div class="form-group">
+                <%= f.email_field :email , class:"form-control", id:"exampleInputEmail1", placeholder: 'Email' %>
+
+              </div>
+              <div class="form-group">
+                <%= f.text_field :organisation , class:"form-control", id:"exampleInputEmail1", placeholder: t('contact.organisation') %>
+              </div>
+              <div class="form-group">
+                <%= f.text_field :subject , class:"form-control", id:"exampleInputEmail1", placeholder: t('contact.subject') %>
+
+              </div>
+              <div class="form-group">
+                <%= f.text_area :text, class:"form-control", id:"inputText", row: 4%>
+              </div>
+              <button type="submit" class="btn btn-primary"><%= 'Submit' %></button>
+          <% end %>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+

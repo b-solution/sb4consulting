@@ -10,6 +10,7 @@
  * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
  * file per style scope.
  *
- *= require style.css.erb
  *= require bootstrap.min
+ *= require style.css.erb
+ *= require font-awesome.min
  */

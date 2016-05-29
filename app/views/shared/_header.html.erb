@@ -1,44 +1,33 @@
-<div class="row-top">
-  <div class="main">
-    <div class="row">
-      <div class="col-md-2 col-lg-2 col-sm-3 col-xs-3 pull-left vcenter">
-        <%= link_to image_tag("sbconsulting/logo.png", class:"img-responsive"), root_path %>
-        <form id="search-form" method="post" enctype="multipart/form-data">
-          <fieldset>
-            <!--<div class="search-field">-->
-            <!--&lt;!&ndash;<input name="search" type="text" value="Search..." onBlur="if(this.value=='') this.value='Search...'" onFocus="if(this.value =='Search...' ) this.value=''" />&ndash;&gt;-->
-            <!--&lt;!&ndash;<a class="search-button" href="#" onClick="document.getElementById('search-form').submit()"></a>&ndash;&gt;-->
-            <!--</div>-->
-          </fieldset>
-        </form>
-      </div>
-    </div>
-  </div>
+
+<div class="header">
+  <%= link_to image_tag("sbconsulting/logo.png", class:"img-responsive"), root_path %>
+
 </div>
-<div class="menu-row">
-  <div class="menu-bg-black"></div>
-  <div class="navbar navbar-default navbar-inverse" role="navigation">
+<div class="sperator">
+</div>
+<nav class="navbar navbar-default">
+  <div class="container">
+    <!-- Brand and toggle get grouped for better mobile display -->
     <div class="navbar-header">
-      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
         <span class="sr-only">Toggle navigation</span>
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
+      <a class="navbar-brand visible-xs" href="#"></a>
     </div>
-    <div class="navbar-collapse collapse">
-      <!-- Right nav -->
-      <ul class="nav navbar-nav navbar-right ">
-        <li class=" <%= params[:action] == "index" ? "active   " : '' %> "><%= link_to t('home_page'), root_path %></li>
-        <li class=" <%= params[:action] == "aboutus" ? "active " : '' %> "><%= link_to t('about_us'), 'about-us' %></li>
-        <li class=" <%= params[:action] == "services" ? "active " : '' %> "><%= link_to t('our_services'), 'our-services' %></li>
-        <li class=" <%= params[:action] == "news" ? "active " : '' %> "><%= link_to t('news'), 'news' %></li>
-        <li class=" <%= params[:action] == "new"  ? "active " : '' %> "><%= link_to t('contact.contact_link'), 'contact-us' %></li>
+
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav navbar-right">
+        <li ><%= link_to t('home_page'), root_path %></li>
+        <li ><%= link_to t('about_us'), 'about-us' %></li>
+        <li ><%= link_to t('our_services'), 'our-services' %></li>
+        <li ><%= link_to t('news'), 'news' %></li>
+        <li ><%= link_to t('contact.contact_link'), 'contact-us' %></li>
 
       </ul>
-
-    </div><!--/.nav-collapse -->
-  </div>
-
-
-</div>
+    </div><!-- /.navbar-collapse -->
+  </div><!-- /.container-fluid -->
+</nav>
