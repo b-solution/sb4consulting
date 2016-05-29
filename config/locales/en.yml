@@ -20,9 +20,9 @@
 # available at http://guides.rubyonrails.org/i18n.html.
 
 en:
-  home_page: "Home page"
+  home_page: "Home"
   about_us: "About us"
-  our_services: "Our services"
+  our_services: "Services"
   news: "News"
   contact:
     contact_link: "Contact us"
