@@ -6,10 +6,17 @@ class BackEnd::PagesController < ApplicationController
   layout 'base'
 
   def aboutus
-    if BackEnd::Page.count.zero?
-      @back_end_page = BackEnd::Page.create(body: "No Core")
+
+    if BackEnd::Page.where(locale: 'en').count.zero?
+      @english_page = BackEnd::Page.create(body: "No Core", locale: 'en')
     else
-      @back_end_page= BackEnd::Page.first
+      @english_page= BackEnd::Page.where(locale: 'en').first
+    end
+
+    if BackEnd::Page.where(locale: 'fr').count.zero?
+      @french_page = BackEnd::Page.create(body: "No Core", locale: 'fr')
+    else
+      @french_page = BackEnd::Page.where(locale: 'fr').first
     end
   end
 

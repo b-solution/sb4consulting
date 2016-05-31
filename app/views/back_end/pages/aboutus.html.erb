@@ -1,21 +1,49 @@
 
 <p id="notice"><%= notice %></p>
-<div class="col-md-12">
+<div class="pull-right" style="margin-right: 2%;">
+  <%= image_tag('UK-flag.png', height: 23, id: 'en_lang')%>
+  <%= image_tag('France-Flag.png', height: 23, id: 'fr_lang')%>
+</div>
 
-
-
+<div class="col-md-12" id="en_content">
 <h1></h1>
-  <%= link_to 'Edit', edit_back_end_page_path(@back_end_page), class: 'btn btn-success pull-right' %>
+  <%= link_to 'Edit', edit_back_end_page_path(@english_page), class: 'btn btn-success pull-right' %>
 
   <div class="row">
     <div class="col-md-2">
 
     </div>
     <div class="col-md-8" style="background-color: white; padding: 2% 1%;">
-      <%= @back_end_page.body.html_safe %>
+      <%= @english_page.body.html_safe %>
     </div>
     <div class="col-md-2">
     </div>
   </div>
-
 </div>
+<div class="col-md-12" id="fr_content">
+  <h1></h1>
+  <%= link_to 'Edit', edit_back_end_page_path(@french_page), class: 'btn btn-success pull-right' %>
+
+  <div class="row">
+    <div class="col-md-2">
+
+    </div>
+    <div class="col-md-8" style="background-color: white; padding: 2% 1%;">
+      <%= @french_page.body.html_safe %>
+    </div>
+    <div class="col-md-2">
+    </div>
+  </div>
+</div>
+<script>
+  $(document).ready(function(){
+    $('#fr_lang').on('click', function(){
+      $('#fr_content').show()
+      $('#en_content').hide()
+    })
+    $('#en_lang').on('click', function(){
+      $('#fr_content').hide()
+      $('#en_content').show()
+    })
+  })
+</script>
