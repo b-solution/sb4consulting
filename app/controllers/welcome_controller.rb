@@ -3,11 +3,11 @@ class WelcomeController < ApplicationController
   end
 
   def services
-    @services = BackEnd::Service.active(I18n.locale)
+    @services = BackEnd::Service.active(I18n.locale).order('id ASC')
   end
 
   def news
-    @events = BackEnd::Event.active(I18n.locale)
+    @events = BackEnd::Event.active(I18n.locale).order('id ASC')
     # render :under_construction
   end
 
