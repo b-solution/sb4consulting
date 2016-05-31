@@ -7,7 +7,7 @@ class BackEnd::EventsController < ApplicationController
   # GET /back_end/events
   # GET /back_end/events.json
   def index
-    @back_end_events = BackEnd::Event.all
+    @back_end_events = BackEnd::Event.order('id ASC').all
   end
 
   # GET /back_end/events/1

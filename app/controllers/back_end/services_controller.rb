@@ -7,7 +7,7 @@ class BackEnd::ServicesController < ApplicationController
   # GET /back_end/services
   # GET /back_end/services.json
   def index
-    @back_end_services = BackEnd::Service.all
+    @back_end_services = BackEnd::Service.order('id ASC').all
   end
 
   # GET /back_end/services/1
