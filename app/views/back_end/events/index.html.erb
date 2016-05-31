@@ -8,6 +8,7 @@
     <tr>
       <th>Name</th>
       <th>Body</th>
+      <th>Language</th>
       <th>Active</th>
       <th>Date</th>
       <th colspan="3"></th>
@@ -19,6 +20,7 @@
       <tr>
         <td><%= back_end_event.name %></td>
         <td><%= back_end_event.body.html_safe %></td>
+        <td><%= back_end_event.locale %></td>
         <td><%= back_end_event.active %></td>
         <td><%= back_end_event.date %></td>
         <td><%= link_to 'Show', back_end_event , class: 'btn btn-primary' %></td>

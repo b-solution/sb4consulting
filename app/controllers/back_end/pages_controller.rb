@@ -39,6 +39,6 @@ class BackEnd::PagesController < ApplicationController
 
   # Never trust parameters from the scary internet, only allow the white list through.
   def back_end_page_params
-    params.require(:back_end_page).permit(:body)
+    params.require(:back_end_page).permit(:body, :locale)
   end
 end
