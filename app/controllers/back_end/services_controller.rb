@@ -72,6 +72,6 @@ class BackEnd::ServicesController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def back_end_service_params
-      params.require(:back_end_service).permit(:name, :identifier, :header,  :body, :active)
+      params.require(:back_end_service).permit(:name, :identifier, :header,  :body, :active, :locale)
     end
 end

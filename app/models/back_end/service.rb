@@ -11,8 +11,8 @@ class BackEnd::Service < ActiveRecord::Base
 
   end
 
-  def self.active
-    where active: true
+  def self.active(locale= 'en')
+    where( active: true).where(locale: locale.to_s)
   end
 
 
