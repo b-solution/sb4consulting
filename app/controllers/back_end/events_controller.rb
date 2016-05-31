@@ -72,6 +72,6 @@ class BackEnd::EventsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def back_end_event_params
-      params.require(:back_end_event).permit(:name, :identifier, :header, :body, :active, :date)
+      params.require(:back_end_event).permit(:name, :identifier, :header, :body, :active, :date, :locale)
     end
 end

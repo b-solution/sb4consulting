@@ -4,7 +4,7 @@ class BackEnd::Event < ActiveRecord::Base
 
   default_scope {order("id DESC")}
 
-  def self.active
-    where active: true
+  def self.active(locale = 'en')
+    where(active: true).where(locale: locale.to_s)
   end
 end
