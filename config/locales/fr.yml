@@ -2,9 +2,9 @@ fr:
   home_page: "Accueil"
   about_us: "A propos"
   our_services: "Services"
-  news: "Nouvauté"
+  news: "Actualités"
   contact:
-   contact_link: "Contacter nous"
+   contact_link: "Contact"
    phone: "Tél"
    contact_page : 'Formulate de contact'
    name: 'Nom'
