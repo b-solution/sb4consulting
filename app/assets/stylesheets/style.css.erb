@@ -38,12 +38,17 @@ width:100%
      /*height: 40px;*/
 }
 .navbar-nav>li{
-    /*background: #000 url(<%=  asset_path "title-bar-gloss.png" %>) repeat-x top center;*/
+
     margin-left:15px;
     border-radius:7px;
     width:120px;
     z-index: 999;
 
+}
+@media screen and (min-width: 768px) {
+  .navbar-nav>li{
+    background: #000 url(<%=  asset_path "title-bar-gloss.png" %>) repeat-x top center;
+  }
 }
 .navbar-nav>li>a {
     padding-top:10px;
